@@ -1,0 +1,24 @@
+#body{
+}
+
+#calculator{
+
+}
+
+#inputOne, #inputTwo {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#calculateButton{
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+#result{
+    display: none;
+    margin-top: 12px;
+}
+
+
