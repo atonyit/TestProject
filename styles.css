@@ -8,6 +8,10 @@ body {
 	align-items: center;
 }
 
+h2{
+	color: #10453c;
+}
+
 #calculator {
 	display: flex;
 	flex-direction: column;
