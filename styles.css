@@ -17,6 +17,11 @@ body{
   box-shadow: 0 12px 12px rgba(0,0,0,0.1);
   min-height: 20vh;
   min-width: 20vw;
+  /*to prevent from being bigger than the screen + scrolling */
+  position: relative;
+  max-height: 85vh;    
+  overflow-y: auto; 
+  overflow-x: visible;       
 }
 
 label{
@@ -34,7 +39,6 @@ label{
   border-bottom: 2px solid #10453C;
   width: 260px;
   font-size: 15px;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 #inputOne::placeholder,
@@ -58,7 +62,6 @@ label{
 
 #calculateButton:hover{
   opacity: 0.95;
-  font-size: 16.5px;
 }
 
 #calculateButton:active{
@@ -74,25 +77,28 @@ label{
 }
 
 #error{
-  margin: 0px 0 0 0;
+  margin: 6px 20px 0 20px;
   padding-bottom: 2px;
   font-size: 16px;
   color: #b42318;
   min-height: 16px;
 }
 
-/* tooltip */
 #tooltip{
-  position: relative;
-  display: inline-block;
+  position: fixed;
+  top: 100px;
+  right: 380px;
   cursor: pointer;
+  color: #10453C;
+  z-index: 100;
+
 }
 
 #tooltiptext {
   visibility: hidden;
   width: 200px;
   bottom: 130%;
-  right: 55%;
+  left: 55%;
   margin-left: -65px;
   background-color: black;
   color: #ffffff;
@@ -100,7 +106,7 @@ label{
   padding: 12px;
   border-radius: 6px;
   position: absolute;
-  z-index: 1;
+  z-index: 100;
 }
 
 #tooltip:hover #tooltiptext {
