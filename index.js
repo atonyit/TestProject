@@ -22,11 +22,13 @@ document.addEventListener("keydown", function(event){
 document.addEventListener("dblclick", function(){
     resetResult() 
     clearInputs()
+    clearError()
 })
 document.addEventListener("keydown", function(event) {
     if (event.key == "Escape"){
         resetResult()
         clearInputs()
+        clearError()
     }
 })
 
