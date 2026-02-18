@@ -1,6 +1,6 @@
-GuideStone Division Calculator
+# GuideStone Division Calculator
 
-Overview
+## Overview
 
 This is a small web application that takes two numbers, divides the first by the second, and displays the result.
 The project was built using HTML, CSS, and JavaScript only and does not require a server or any external setup. The HTML file can be opened directly in a browser.
@@ -8,7 +8,7 @@ The project was built using HTML, CSS, and JavaScript only and does not require 
 The goal of the project is to demonstrate input handling, validation, and user interface interaction in a simple calculator format.
 
 
-Features
+## Features
 
 Two number input fields
 
@@ -31,14 +31,14 @@ Responsive and centered layout
 Tooltip with usage instructions
 
 
-How to Run
+## How to Run
 
 Download or extract the project folder.
 
 Open index.html in any modern web browser.
 
 
-How to Use
+## How to Use
 
 Enter a number in Number 1.
 
@@ -55,7 +55,7 @@ Use Remove to delete a single entry or Clear All to clear the entire history.
 Double-click anywhere or press Escape to reset the inputs.
 
 
-Validation Rules
+## Validation Rules
 
 Both inputs must be filled.
 
@@ -63,13 +63,13 @@ Division by zero is not allowed.
 
 Error messages are shown if inputs are invalid.
 
-File Structure
+## File Structure
 /project-folder
-  ├── index.html   → main layout and structure
-  ├── styles.css   → styling and layout
-  ├── index.js     → logic, validation, and history handling
-  └── README.md    → project overview and instructions
+  - index.html   → main layout / structure
+  - styles.css   → styling and layout
+  - index.js     → logic, validation, and history handling
+  - README.md    → project overview / instructions
   
-Notes
+## Notes
 - History is stored only while the page is open and resets when the page is refreshed.
 - No external libraries are used besides Font Awesome for the tooltip icon.
