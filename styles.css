@@ -1,174 +1,175 @@
-body{
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  background: #f6f8f7;
-  align-items: center;
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	background: #f6f8f7;
+	align-items: center;
 }
 
 #calculator {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 12px 12px rgba(0,0,0,0.1);
-  min-height: 20vh;
-  min-width: 20vw;
-  /*to prevent from being bigger than the screen + scrolling */
-  position: relative;
-  max-height: 85vh;    
-  overflow-y: auto; 
-  overflow-x: visible;       
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+	min-height: 20vh;
+	min-width: 20vw;
+	/*to prevent from being bigger than the screen + scrolling */
+	position: relative;
+	max-height: 85vh;
+	overflow-y: auto;
+	overflow-x: visible;
 }
 
-label{
-  margin: 10px 20px 6px 20px;
-  font-size: 13px;
-  color: #2a2a2a;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+label {
+	margin: 10px 20px 6px 20px;
+	font-size: 13px;
+	color: #2a2a2a;
+	font-weight: 600;
+	letter-spacing: 0.2px;
 }
 
-#inputOne, #inputTwo {
-  margin: 0px 20px 16px 20px; /* tighter bottom spacing */
-  padding: 10px 12px;
-  border: none;
-  border-bottom: 2px solid #10453C;
-  width: 260px;
-  font-size: 15px;
+#inputOne,
+#inputTwo {
+	margin: 0px 20px 16px 20px; /* tighter bottom spacing */
+	padding: 10px 12px;
+	border: none;
+	border-bottom: 2px solid #10453c;
+	width: 260px;
+	font-size: 15px;
 }
 
 #inputOne::placeholder,
-#inputTwo::placeholder{
-  color: #9aa3a0;
+#inputTwo::placeholder {
+	color: #9aa3a0;
 }
 
-#inputOne:focus, #inputTwo:focus{
-  outline: none;
+#inputOne:focus,
+#inputTwo:focus {
+	outline: none;
 }
 
 #calculateButton {
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #10453C;
-  border: 1px solid #FCE7A4;
-  border-radius: 12px;
-  color: #FCE7A4;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+	background-color: #10453c;
+	border: 1px solid #fce7a4;
+	border-radius: 12px;
+	color: #fce7a4;
 }
 
-#calculateButton:hover{
-  opacity: 0.95;
+#calculateButton:hover {
+	opacity: 0.95;
 }
 
-#calculateButton:active{
-  transform: translateY(2px);
+#calculateButton:active {
+	transform: translateY(2px);
 }
 
-#result{
-  display: none;
-  font-size: 26px;
-  font-weight: 800;
-  margin: 10px 20px 0 20px;
-  color: #10453C;
+#result {
+	display: none;
+	font-size: 26px;
+	font-weight: 800;
+	margin: 10px 20px 0 20px;
+	color: #10453c;
 }
 
-#error{
-  margin: 6px 20px 0 20px;
-  padding-bottom: 2px;
-  font-size: 16px;
-  color: #b42318;
-  min-height: 16px;
+#error {
+	margin: 6px 20px 0 20px;
+	padding-bottom: 2px;
+	font-size: 16px;
+	color: #b42318;
+	min-height: 16px;
 }
 
-#tooltip{
-  position: fixed;
-  top: 100px;
-  right: 380px;
-  cursor: pointer;
-  color: #10453C;
-  z-index: 100;
-
+#tooltip {
+	position: fixed;
+	top: 100px;
+	right: 380px;
+	cursor: pointer;
+	color: #10453c;
+	z-index: 100;
 }
 
 #tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  bottom: 130%;
-  left: 55%;
-  margin-left: -65px;
-  background-color: black;
-  color: #ffffff;
-  text-align: center;
-  padding: 12px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 100;
+	visibility: hidden;
+	width: 200px;
+	bottom: 130%;
+	left: 55%;
+	margin-left: -65px;
+	background-color: black;
+	color: #ffffff;
+	text-align: center;
+	padding: 12px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 100;
 }
 
 #tooltip:hover #tooltiptext {
-  visibility: visible;
+	visibility: visible;
 }
 
 /* history */
-#clearButton{
-  margin: 12px 20px 0 20px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background: white;
-  font-weight: 600;
+#clearButton {
+	margin: 12px 20px 0 20px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	background: white;
+	font-weight: 600;
 }
 
-#clearButton:disabled{
-  opacity: 0.5;
-  cursor: not-allowed;
+#clearButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 
-#clearButton:hover{
-  background: #f6f8f7;
+#clearButton:hover {
+	background: #f6f8f7;
 }
 
-#clearButton:active{
-  transform: translateY(2px);
+#clearButton:active {
+	transform: translateY(2px);
 }
 
-#emptyHistory{
-  margin: 10px 0 0 0;
-  color: #666;
-  font-size: 13px;
+#emptyHistory {
+	margin: 10px 0 0 0;
+	color: #666;
+	font-size: 13px;
 }
 
-#historyList{
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#historyList {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
-.historyItem{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #eee;
-  padding: 10px;
-  border-radius: 8px;
+.historyItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #eee;
+	padding: 10px;
+	border-radius: 8px;
 }
 
-.removeBtn{
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  background: white;
-  cursor: pointer;
+.removeBtn {
+	padding: 6px 10px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	background: white;
+	cursor: pointer;
 }
 
-.removeBtn:hover{
-  background: #f6f6f6;
+.removeBtn:hover {
+	background: #f6f6f6;
 }
