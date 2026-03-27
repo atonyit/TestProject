@@ -1,4 +1,4 @@
-# GuideStone Division Calculator
+# Division Calculator
 
 ## Overview
 
